@@ -8,6 +8,10 @@ double sum(double a, double b=0);
 
 auto foo();
 
+
+template <typename T> T prod(T a, T b);
+template <typename T1, typename T2> T1 prod(T1 a, T2 b);
+
 int main()
 {
 	/*
@@ -19,6 +23,8 @@ int main()
 	// sum(0.0,1.0);
 	// sum(0);
 	// sum(0.0);
+
+
 
 	/*
 	* auto: Auto assignment keyword
@@ -44,8 +50,19 @@ int main()
 	// auto x7 = foo();
 	// std::cout << "Tipo da variavel X7 eh: "<< typeid(x7).name() << '\n';
 	
-	
 
+
+	/*
+	* Template of function
+	*/
+	// auto x8 = prod(10,2);
+	// std::cout << "Tipo da variavel X8 eh: "<< typeid(x8).name() << '\n';
+
+	// auto x9 = prod(10.0,2.0);
+	// std::cout << "Tipo da variavel X9 eh: "<< typeid(x9).name() << '\n';
+
+	// auto x10 = prod(10.0,2);
+	// std::cout << "Tipo da variavel X10 eh: "<< typeid(x10).name() << '\n';
 }	
 
 int sum(int a, int b)
@@ -74,4 +91,13 @@ double sum(double a, double b)
 auto foo()
 {
 	return;
+}
+
+template <typename T> T prod(T a, T b)
+{
+	return a*b;
+}
+template <typename T1, typename T2> T1 prod(T1 a, T2 b)
+{
+	return a*b;
 }
